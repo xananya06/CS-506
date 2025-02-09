@@ -24,10 +24,12 @@ Budget Analysis Goals
 2. Interdepartmental Funding Shifts:
    - Assess how funding has shifted between BPD and other city departments over time, such as reallocations to public health, education, or community programs.
 
-Payroll and Compensation Goals 3. Paycheck Trends:
+Payroll and Compensation Goals
 
-- Evaluate changes in BPD paychecks year-over-year, comparing average salaries with non-BPD Boston city employees.
-- Breakdown pay structures into regular pay, overtime pay, and other components (e.g., detail pay, bonuses).
+3. Paycheck Trends:
+
+   - Evaluate changes in BPD paychecks year-over-year, comparing average salaries with non-BPD Boston city employees.
+   - Breakdown pay structures into regular pay, overtime pay, and other components (e.g., detail pay, bonuses).
 
 4. Overtime Cost Predictions:
 
@@ -36,10 +38,12 @@ Payroll and Compensation Goals 3. Paycheck Trends:
 5. Injury Pay Analysis:
    - Quantify the portion of BPD officer pay attributed to injury claims and calculate the percentage of officers receiving injury pay annually.
 
-Overtime Efficiency Goals 6. Worked vs. Paid Overtime Discrepancies:
+Overtime Efficiency Goals
 
-- Compare overtime hours worked versus paid to identify financial discrepancies year-over-year.
-- Calculate the financial impact of these discrepancies on the department's budget.
+6. Worked vs. Paid Overtime Discrepancies:
+
+   - Compare overtime hours worked versus paid to identify financial discrepancies year-over-year.
+   - Calculate the financial impact of these discrepancies on the department's budget.
 
 7. Demographic Analysis of Overtime Ratios:
 
@@ -48,10 +52,12 @@ Overtime Efficiency Goals 6. Worked vs. Paid Overtime Discrepancies:
 8. Outlier Detection in Overtime Ratios:
    - Analyze the distribution of overtime worked versus paid ratios to identify outliers and patterns that may indicate inefficiencies or misconduct.
 
-Deliverables and Insights 9. Visualization and Reporting:
+Deliverables and Insights
 
-- Create detailed visualizations (e.g., charts, graphs) to support findings on budget trends, payroll analysis, and overtime discrepancies.
-- Provide actionable insights for stakeholders to improve budget transparency and efficiency.
+9. Visualization and Reporting:
+
+   - Create detailed visualizations (e.g., charts, graphs) to support findings on budget trends, payroll analysis, and overtime discrepancies.
+   - Provide actionable insights for stakeholders to improve budget transparency and efficiency.
 
 10. Policy Recommendations:
     - Develop evidence-based recommendations for optimizing resource allocation within BPD.
