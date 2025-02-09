@@ -1,2 +1,12 @@
 # CS-506
 This is the project repository for CS 506: Computational Tools for Data Science
+
+**DESCRIPTION**
+The Police Overtime project for Spring 2025 conducts an extensive investigation into the Boston Police Department's financial expenses through an evaluation of overtime cost registration and allocation. The BPD handles an annual budget worth more than $400 million which requires detailed examination of its financial distributions. This research examines police financing patterns while investigating inefficiencies that may occur through overtime remunerations within budgetary frameworks. The project establishes financial transparency for law enforcement operations because policing remains exposed to sensitive political influences.
+
+The analysis dedicates substantial time to studying overtime payments along with other aspects of police payroll. The research will examine both base compensation and overtime pay while investigating any time discrepancy between recorded work hours and received payments as it affects different officer groups depending on their rank and time in service and background demographics. The research utilizes historical data from 2011 to 2023 and makes projections about future overtime spending up until and beyond 2024. Statistical analysis combined with visualization tools allows the project to demonstrate whether overtime utilization delivers useful results or provides a cover for unneeded expenses.
+
+The study gathers information from three primary data points which consist of employee earnings reports and BPD field activity records together with the City of Boston’s operating budget data. A geospatial data analysis through Python, Power BI and ArcGIS will process and visualize the information to reveal essential insights. We as a team will issue three main deliverables consisting of both statistical reports and visualized displays that present overtime spending patterns in the police force. Stakeholders including policymakers and advocacy organizations will use the obtained findings to make informed choices focusing on budget allocating and oversight capabilities.
+
+
+The project promotes additional studies on extension topics that analyze systemic inequalities in police departments as well as environmental and political dimensions of police vehicle idling and funding sources. Research findings will achieve public transparency while directing policy decisions to establish equal public safety funding governance.
