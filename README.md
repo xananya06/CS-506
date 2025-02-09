@@ -1,7 +1,7 @@
 # CS-506
 This is the project repository for CS 506: Computational Tools for Data Science
 
-**DESCRIPTION**
+## DESCRIPTION
 The Police Overtime project for Spring 2025 conducts an extensive investigation into the Boston Police Department's financial expenses through an evaluation of overtime cost registration and allocation. The BPD handles an annual budget worth more than $400 million which requires detailed examination of its financial distributions. This research examines police financing patterns while investigating inefficiencies that may occur through overtime remunerations within budgetary frameworks. The project establishes financial transparency for law enforcement operations because policing remains exposed to sensitive political influences.
 
 The analysis dedicates substantial time to studying overtime payments along with other aspects of police payroll. The research will examine both base compensation and overtime pay while investigating any time discrepancy between recorded work hours and received payments as it affects different officer groups depending on their rank and time in service and background demographics. The research utilizes historical data from 2011 to 2023 and makes projections about future overtime spending up until and beyond 2024. Statistical analysis combined with visualization tools allows the project to demonstrate whether overtime utilization delivers useful results or provides a cover for unneeded expenses.
