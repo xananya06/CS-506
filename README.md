@@ -1,22 +1,68 @@
 # CS-506
+
 This is the project repository for CS 506: Computational Tools for Data Science
 
 ## DESCRIPTION
+
 The Police Overtime project for Spring 2025 conducts an extensive investigation into the Boston Police Department's financial expenses through an evaluation of overtime cost registration and allocation. The BPD handles an annual budget worth more than $400 million which requires detailed examination of its financial distributions. This research examines police financing patterns while investigating inefficiencies that may occur through overtime remunerations within budgetary frameworks. The project establishes financial transparency for law enforcement operations because policing remains exposed to sensitive political influences.
 
 The analysis dedicates substantial time to studying overtime payments along with other aspects of police payroll. The research will examine both base compensation and overtime pay while investigating any time discrepancy between recorded work hours and received payments as it affects different officer groups depending on their rank and time in service and background demographics. The research utilizes historical data from 2011 to 2023 and makes projections about future overtime spending up until and beyond 2024. Statistical analysis combined with visualization tools allows the project to demonstrate whether overtime utilization delivers useful results or provides a cover for unneeded expenses.
 
 The study gathers information from three primary data points which consist of employee earnings reports and BPD field activity records together with the City of Boston’s operating budget data. A geospatial data analysis through Python, Power BI and ArcGIS will process and visualize the information to reveal essential insights. We as a team will issue three main deliverables consisting of both statistical reports and visualized displays that present overtime spending patterns in the police force. Stakeholders including policymakers and advocacy organizations will use the obtained findings to make informed choices focusing on budget allocating and oversight capabilities.
 
-
 The project promotes additional studies on extension topics that analyze systemic inequalities in police departments as well as environmental and political dimensions of police vehicle idling and funding sources. Research findings will achieve public transparency while directing policy decisions to establish equal public safety funding governance.
+
+## Goals
+
+Budget Analysis Goals
+
+1. Year-Over-Year Budget Trends:
+
+   - Analyze how the Boston Police Department (BPD) budget has changed annually, identifying key growth or reduction areas.
+   - Examine overall and intra-departmental shifts in funding allocations.
+
+2. Interdepartmental Funding Shifts:
+   - Assess how funding has shifted between BPD and other city departments over time, such as reallocations to public health, education, or community programs.
+
+Payroll and Compensation Goals 3. Paycheck Trends:
+
+- Evaluate changes in BPD paychecks year-over-year, comparing average salaries with non-BPD Boston city employees.
+- Breakdown pay structures into regular pay, overtime pay, and other components (e.g., detail pay, bonuses).
+
+4. Overtime Cost Predictions:
+
+   - Predict future overtime expenditures using historical data and compare these forecasts with budget allocations for the upcoming fiscal year.
+
+5. Injury Pay Analysis:
+   - Quantify the portion of BPD officer pay attributed to injury claims and calculate the percentage of officers receiving injury pay annually.
+
+Overtime Efficiency Goals 6. Worked vs. Paid Overtime Discrepancies:
+
+- Compare overtime hours worked versus paid to identify financial discrepancies year-over-year.
+- Calculate the financial impact of these discrepancies on the department's budget.
+
+7. Demographic Analysis of Overtime Ratios:
+
+   - Investigate whether specific demographics (e.g., race, age, gender, tenure, or rank) are associated with lower worked-to-paid overtime ratios.
+
+8. Outlier Detection in Overtime Ratios:
+   - Analyze the distribution of overtime worked versus paid ratios to identify outliers and patterns that may indicate inefficiencies or misconduct.
+
+Deliverables and Insights 9. Visualization and Reporting:
+
+- Create detailed visualizations (e.g., charts, graphs) to support findings on budget trends, payroll analysis, and overtime discrepancies.
+- Provide actionable insights for stakeholders to improve budget transparency and efficiency.
+
+10. Policy Recommendations:
+    - Develop evidence-based recommendations for optimizing resource allocation within BPD.
+    - Suggest reforms to address inefficiencies in overtime spending and promote equitable compensation practices.
 
 ## Data
 
-The data used in this project is collected and provided by the City of Boston. As the nature of this project is to determine how the Boston Police Department distributes their money, especially related to overtime, these are the datasets and data dictionaries which will be used in the project. 
+The data used in this project is collected and provided by the City of Boston. As the nature of this project is to determine how the Boston Police Department distributes their money, especially related to overtime, these are the datasets and data dictionaries which will be used in the project.
 [Employees Earnings Data](https://data.boston.gov/dataset/employee-earnings-report), [Payroll Categories](https://data.boston.gov/dataset/employee-earnings-report/resource/609a6014-5ab0-49d9-8c38-1389e7bf0d41), [Boston Police Department's Field Interrogation and Observation (FIO) program](https://data.boston.gov/dataset/boston-police-department-fio), [BPD Roster](https://drive.google.com/drive/u/1/folders/1WKuP3SyeyBEHhnNi1O8e6vXMTk3cmaCj),[Overtime details](https://drive.google.com/drive/folders/1MCvI3iUbNnPE3an9tLKMfshEGwOvv52o) and [The entire operating budget of the city of Boston](https://data.boston.gov/dataset/operating-budget).
 
-These dataset contains the earnings of all government employees for the City of Boston. We are specifically interested in the earnings of the employees of the Boston Police Department (BPD), to evaluate how the BPD spends their funds. A data dictionary is also provided explaining the different payment types of the BPD, and how overtime and regular pay is calculated. Another dataset contains the records from the Boston Police Department's Field Interrogation and Observation (FIO) program. This program documents interactions between police officers and individuals, including stops, observations, and interrogations, which can be relevant as to when overtime is payed and for which reason to certain individuals. Finally a dataset containing the overtime details is provided, to help with analysis and inference. 
+These dataset contains the earnings of all government employees for the City of Boston. We are specifically interested in the earnings of the employees of the Boston Police Department (BPD), to evaluate how the BPD spends their funds. A data dictionary is also provided explaining the different payment types of the BPD, and how overtime and regular pay is calculated. Another dataset contains the records from the Boston Police Department's Field Interrogation and Observation (FIO) program. This program documents interactions between police officers and individuals, including stops, observations, and interrogations, which can be relevant as to when overtime is payed and for which reason to certain individuals. Finally a dataset containing the overtime details is provided, to help with analysis and inference.
 
 These datasets will be explored and cleaned for our use case. During the duration of the project, new datasets can be added or existing datasets can be removed.
 
@@ -34,7 +80,6 @@ For example:
 2. Another approach would be to check the percentage of overpayment given to various buckets of regular pay. This could be achieved with the help of a pie chart.
 
 Overall, our objective of uncovering insights and patterns remains paramount, and we aim to identify interesting trends within the dataset.
-
 
 ## Test Plan
 
