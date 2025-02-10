@@ -72,6 +72,28 @@ These dataset contains the earnings of all government employees for the City of 
 
 These datasets will be explored and cleaned for our use case. During the duration of the project, new datasets can be added or existing datasets can be removed.
 
+## Modeling
+
+Modeling is a crucial part of the data processing pipeline to extract meaningful insights from clean and pre-processed data. It helps us to better understand and predict current and future trends based on past information. We plan on doing the following:
+
+1. To identify trends that are not stationary and it's dependence on features, we plan on using variations of ARIMA that explain trends over time
+
+2. We plan on using correlation analyses to identify how one factor might affect or depend on another
+
+3. Statistical analysis ( ex t-test ) based feature selection for modeling and grouping the data based on significance.
+
+4. Linear Regression ( Lasso and Ridge ) to fit current trends and apply it to future data.
+
+5. Decision trees and Random Forests to model decisions where explainability is key.
+
+6. Principal and Canonical Component analysis to understand variability in the features.
+
+7. Outlier Detection by observing clusters in the data that may point to inefficiencies or misconduct.
+
+By using different types of models (SVC, Logistic Regression, LSTM, Gradient Boosting, Model Stacking) where appropriate improving the metrics of prediction ( Accuracy, f1, precision, recall, ROC-AUC ) depending on the situation. Cross Validation would be done to ensure the model is robust on multiple seeds.
+
+This would be done across multiple tools including python, seaborn and powerBI.
+
 ## Visualization
 
 The need for visualization is paramount for this project. Visualization is one of the key steps as it helps us quickly identify any outliers, patterns, and information of significance.
