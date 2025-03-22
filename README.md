@@ -10,3 +10,12 @@ The study gathers information from three primary data points which consist of em
 
 
 The project promotes additional studies on extension topics that analyze systemic inequalities in police departments as well as environmental and political dimensions of police vehicle idling and funding sources. Research findings will achieve public transparency while directing policy decisions to establish equal public safety funding governance.
+
+## Data
+
+The data used in this project is collected and provided by the City of Boston. As the nature of this project is to determine how the Boston Police Department distributes their money, especially related to overtime, these are the datasets and data dictionaries which will be used in the project. 
+[Employees Earnings Data](https://data.boston.gov/dataset/employee-earnings-report), [Payroll Categories](https://data.boston.gov/dataset/employee-earnings-report/resource/609a6014-5ab0-49d9-8c38-1389e7bf0d41), [Boston Police Department's Field Interrogation and Observation (FIO) program](https://data.boston.gov/dataset/boston-police-department-fio), [BPD Roster](https://drive.google.com/drive/u/1/folders/1WKuP3SyeyBEHhnNi1O8e6vXMTk3cmaCj),[Overtime details](https://drive.google.com/drive/folders/1MCvI3iUbNnPE3an9tLKMfshEGwOvv52o) and [The entire operating budget of the city of Boston](https://data.boston.gov/dataset/operating-budget).
+
+These dataset contains the earnings of all government employees for the City of Boston. We are specifically interested in the earnings of the employees of the Boston Police Department (BPD), to evaluate how the BPD spends their funds. A data dictionary is also provided explaining the different payment types of the BPD, and how overtime and regular pay is calculated. Another dataset contains the records from the Boston Police Department's Field Interrogation and Observation (FIO) program. This program documents interactions between police officers and individuals, including stops, observations, and interrogations, which can be relevant as to when overtime is payed and for which reason to certain individuals. Finally a dataset containing the overtime details is provided, to help with analysis and inference. 
+
+These datasets will be explored and cleaned for our use case. During the duration of the project, new datasets can be added or existing datasets can be removed.
