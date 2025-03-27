@@ -1,0 +1,34 @@
+﻿Operating Budgets - Police Department Analysis Insights
+* Mohamed Ifreen
+
+
+
+
+1. The Bureau of Intelligence & Analysis saw the most decrease in budget for 2025 in comparison to its budget for the annual year 2022.
+
+
+2. The Bureau of Professional Development saw the most increase in budget for 2025 in comparison to its budget for the annual year 2022.
+
+
+3. The 2025 budget allocation saw an increase from all of the previous Financial years.
+
+
+4. BAT Programmes requirements for equipment have greatly increased.
+
+
+5. Current Charges & Obligations under the Bureau of Field Services saw a staggering 5000% increase in the FY 2025 Budget in comparison to the 2022 Budget.
+
+
+6. Equipment and Contractual Services saw a significant increase in budget allocation.
+
+
+7. Supplies & Materials under the Police Commissioner's Office had the greatest decrease in Budget for 2025 in comparison to 2022.
+
+
+8. The Bureau of Intelligence & Analysis budget kept decreasing from 2022 to 2024 and then from 2024 to 2025 it saw a mild increase in budget.
+
+
+9. The last cell block visualizes the programme which has allocated the minimum/maximum funds on each of the expense categories for 2025.
+
+
+10. The overall trends are increasing while some show fluctuations/decrease in growth sporadically.
