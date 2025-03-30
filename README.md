@@ -2,119 +2,91 @@
 
 This is the project repository for CS 506: Computational Tools for Data Science
 
-## DESCRIPTION
+## Dataset Cleaning :
 
-The Police Overtime project for Spring 2025 conducts an extensive investigation into the Boston Police Department's financial expenses through an evaluation of overtime cost registration and allocation. The BPD handles an annual budget worth more than $400 million which requires detailed examination of its financial distributions. This research examines police financing patterns while investigating inefficiencies that may occur through overtime remunerations within budgetary frameworks. The project establishes financial transparency for law enforcement operations because policing remains exposed to sensitive political influences.
+#### **_Dataset 1 : Operating Budgets_**
 
-The analysis dedicates substantial time to studying overtime payments along with other aspects of police payroll. The research will examine both base compensation and overtime pay while investigating any time discrepancy between recorded work hours and received payments as it affects different officer groups depending on their rank and time in service and background demographics. The research utilizes historical data from 2011 to 2023 and makes projections about future overtime spending up until and beyond 2024. Statistical analysis combined with visualization tools allows the project to demonstrate whether overtime utilization delivers useful results or provides a cover for unneeded expenses.
+The cleaning process of the data started with the visualization of the data frame. The following points below highlights the steps taken.
 
-The study gathers information from three primary data points which consist of employee earnings reports and BPD field activity records together with the City of Boston’s operating budget data. A geospatial data analysis through Python, Power BI and ArcGIS will process and visualize the information to reveal essential insights. We as a team will issue three main deliverables consisting of both statistical reports and visualized displays that present overtime spending patterns in the police force. Stakeholders including policymakers and advocacy organizations will use the obtained findings to make informed choices focusing on budget allocating and oversight capabilities.
+**_1. Filtering :_**
 
-The project promotes additional studies on extension topics that analyze systemic inequalities in police departments as well as environmental and political dimensions of police vehicle idling and funding sources. Research findings will achieve public transparency while directing policy decisions to establish equal public safety funding governance.
+The dataset consisted of lots of irrelevant departments that were not necessary for the analysis of BPD (Boston Police department). The dataset was filtered on the BPD prior to the handling of missing values, outliers and other analysis.
 
-## Goals
+**_2. Missing values :_**
 
-Budget Analysis Goals
+The missing values within the dataframe were isolated. The missing values were labelled in the original dataset as “#Missing”. 
 
-1. Year-Over-Year Budget Trends:
+**_3. Datatypes :_**
 
-   - Analyze how the Boston Police Department (BPD) budget has changed annually, identifying key growth or reduction areas.
-   - Examine overall and intra-departmental shifts in funding allocations.
+Numerical columns such as Year wise Budget were interpreted as “Object” Datatype. The respective columns were converted into a floating type datapoint for easier analysis and to extract the relevant statistics out of them.  
 
-2. Interdepartmental Funding Shifts:
-   - Assess how funding has shifted between BPD and other city departments over time, such as reallocations to public health, education, or community programs.
 
-Payroll and Compensation Goals
+## Outlier Detection :
 
-3. Paycheck Trends:
+#### **_Dataset 1 : Operating Budgets_**
 
-   - Evaluate changes in BPD paychecks year-over-year, comparing average salaries with non-BPD Boston city employees.
-   - Breakdown pay structures into regular pay, overtime pay, and other components (e.g., detail pay, bonuses).
+![alt text](Plots/Outlier.png)
 
-4. Overtime Cost Predictions:
+InterQuartile Range (IQR) was used to detect the outliers. Each of the numerical feature columns 3rd Quartile and 1st Quartile were obtained and then the values exceeding the quartile and the IQR*1.5 combined were identified. Post that, Manual eyeballing of the data to confirm if indeed the presented values were outliers was used. 
 
-   - Predict future overtime expenditures using historical data and compare these forecasts with budget allocations for the upcoming fiscal year.
 
-5. Injury Pay Analysis:
-   - Quantify the portion of BPD officer pay attributed to injury claims and calculate the percentage of officers receiving injury pay annually.
+## Visualization and Insights :
 
-Overtime Efficiency Goals
+#### **_Dataset 1 : Operating Budgets_**
 
-6. Worked vs. Paid Overtime Discrepancies:
+Boston Police Department has undergone varying shifts between the years 2022 and 2025. While the overall budget has indeed increase between the given time frames, there are certain expense categories and intra-department allocations that have experienced significant fluctuations and changes. 
 
-   - Compare overtime hours worked versus paid to identify financial discrepancies year-over-year.
-   - Calculate the financial impact of these discrepancies on the department's budget.
 
-7. Demographic Analysis of Overtime Ratios:
 
-   - Investigate whether specific demographics (e.g., race, age, gender, tenure, or rank) are associated with lower worked-to-paid overtime ratios.
+**_1. General Trends :_**
 
-8. Outlier Detection in Overtime Ratios:
-   - Analyze the distribution of overtime worked versus paid ratios to identify outliers and patterns that may indicate inefficiencies or misconduct.
+The overall budget has increased from 2022 to 2025 for most of the departments. This suggests an increased emphasis on most of the department activities. The increase has been seen on various expense categories ranging from equipments to personnel across which the trend is overall increasing however with notable fluctuations.
 
-Deliverables and Insights
+The below diagram highlights the increase/decrease in budgets across departments between 2022-2025
 
-9. Visualization and Reporting:
+![alt text](./Plots/2022-2025 Department Budget Inc:Dec.png)
 
-   - Create detailed visualizations (e.g., charts, graphs) to support findings on budget trends, payroll analysis, and overtime discrepancies.
-   - Provide actionable insights for stakeholders to improve budget transparency and efficiency.
 
-10. Policy Recommendations:
-    - Develop evidence-based recommendations for optimizing resource allocation within BPD.
-    - Suggest reforms to address inefficiencies in overtime spending and promote equitable compensation practices.
+_**2. Significant areas where budget was reduced :**_
 
-## Data
+One of the important insights that was derived from this analysis is that of the reduction in the prioritization of intelligence focused spending. 
 
-The data used in this project is collected and provided by the City of Boston. As the nature of this project is to determine how the Boston Police Department distributes its money, especially related to overtime, these are the datasets and data dictionaries that will be used in the project.
-[Employees Earnings Data](https://data.boston.gov/dataset/employee-earnings-report), [Payroll Categories](https://data.boston.gov/dataset/employee-earnings-report/resource/609a6014-5ab0-49d9-8c38-1389e7bf0d41), [Boston Police Department's Field Interrogation and Observation (FIO) program](https://data.boston.gov/dataset/boston-police-department-fio), [BPD Roster](https://drive.google.com/drive/u/1/folders/1WKuP3SyeyBEHhnNi1O8e6vXMTk3cmaCj),[Overtime details](https://drive.google.com/drive/folders/1MCvI3iUbNnPE3an9tLKMfshEGwOvv52o) and [the entire operating budget of the city of Boston](https://data.boston.gov/dataset/operating-budget). All these datasets were provided in the Spark Project outline.
+Bureau of Investigative services saw a cut across various different expense categories between the fiscal years of 2022 and 2025. This signifies the shift from investigative services. 
 
-This dataset contains all government employees' earnings for the City of Boston. We are specifically interested in the earnings of the employees of the Boston Police Department (BPD), to evaluate how the BPD spends their funds. A data dictionary is also provided explaining the different payment types of the BPD, and how overtime and regular pay are calculated. Another dataset contains the records from the Boston Police Department's Field Interrogation and Observation (FIO) program. This program documents interactions between police officers and individuals, including stops, observations, and interrogations, which can be relevant as to when overtime is paid and for which reason to certain individuals. Finally, a dataset containing the overtime details is provided, to help with analysis and inference.
+The police commissioner’s office has reduced the budget for Supplies and Materials by 35% between 2022-2025.
 
-These datasets will be explored and cleaned for our use case. During the project's duration, new datasets can be added or existing datasets can be removed if necessary.
+The Bureau of Intelligence & Analysis saw a decreasing trend in its budget from 2022-2023-2024 with a slight recovery (increase) in budget from 2024-2025
 
-## Modeling
+![alt text](./Plots/Decrease_Budgets.png)
 
-Modeling is a crucial part of the data processing pipeline to extract meaningful insights from clean and pre-processed data. It helps us to better understand and predict current and future trends based on past information. We plan on doing the following:
+**_3. Significant areas where budget was increased :_**
 
-1. To identify trends that are not stationary and it's dependence on features, we plan on using variations of ARIMA that explain trends over time
+Most of the department and expense categories within each department saw an increase in their budgets. The increase in budget was observed across majority of the expense categories with a special focus on the equipments, contractual services and the Current Charges and Obligations.
 
-2. We plan on using correlation analyses to identify how one factor might affect or depend on another
+One of the interesting trends uncovered was that of the expense category “Current Charges and Obligations” under the Bureau of Field Services. It saw a staggering 5523% increase in budget between 2022 and 2025. This suggests a major operational expansion. 
 
-3. Statistical analysis ( ex t-test ) based feature selection for modeling and grouping the data based on significance.
+Equipments expenses underneath the Bureau of Community Engagement and Bureau of Professional Development saw a dramatic increase in its budget of 4091% and 2798% respectively. This suggests an increased attempt at public initiatives, and training the personnel with the latest modern technological standards. 
 
-4. Linear Regression ( Lasso and Ridge ) to fit current trends and apply it to future data.
+Across many departments, Contractual services have seen sharp rises with the highest being noted for Bureau of Professional Standards. 
 
-5. Decision trees and Random Forests to model decisions where explainability is key.
+One interesting trend that can be observed is that of the Bureau of Community Engagement. Although many expense categories within this department have seen a staggering increase in its budget and the overall trend between 2022 and 2025 also suggest an increase in the budget, between the years of 2024 and 2025, It has faced cuts in funding. 
 
-6. Principal and Canonical Component analysis to understand variability in the features.
+![alt text](./Plots/Increase_Budgets.png)
 
-7. Outlier Detection by observing clusters in the data that may point to inefficiencies or misconduct.
 
-By using different types of models (SVC, Logistic Regression, LSTM, Gradient Boosting, Model Stacking) where appropriate improving the metrics of prediction ( Accuracy, f1, precision, recall, ROC-AUC ) depending on the situation. Cross Validation would be done to ensure the model is robust on multiple seeds.
+**_4. Shifts in Funding between Departments :_**
 
-This would be done across multiple tools including python, seaborn and powerBI.
+Most of the department saw an increase in their budgets from 2022 to 2025 except the Bureau of Intelligence and Analysis & Bureau of Investigative Services.
 
-## Visualization
+Bureau of Community Engagement saw a growth between 2022-2024 and from 2024-2025, a cut in budget has been observed.
 
-The need for visualization is paramount for this project. Visualization is one of the key steps as it helps us quickly identify any outliers, patterns, and information of significance.
+The below diagram highlights the increase/decrease in budgets across departments between 2024-2025
 
-We aim to use a mixture of tools for visualization. This includes, but is not limited to, native Python libraries such as Seaborn, dedicated visualization tools like Tableau, and using an external repo to keep track of the experimentation. The latter part focuses more on the visualization of the modeling experiments.
+![alt text](./Plots/2024-2025 Department Budget Inc:Dec.png)
 
-Our primary objective would be to uncover patterns, and for this, we may involve a multitude of plots such as box plots, violin plots, scatter plots, and more. The former (box plots) would be crucial to our analysis in figuring out what sort of outliers exist. Detecting the presence of outliers would be essential as it would help us uncover abnormalities and anomalies within the dataset. Standard plotting methodologies like scatter plots, pie charts, line charts, and the likes of it can be used to visualize the dependency of multiple features against each other.
+The personnel services under the Bureau of Intelligence and Analysis saw a major decrease in its funding. The budget for this department started mildly recovering from 2024.
 
-For example:
+Bureau of Investigative Services saw a decline in its budget from 2022 to 2025 and also across much of its expense category. It did not see a positive growth even from the fiscal year 2024 unlike the Intelligence and Analysis department. This heavily signifies the reduced emphasis on investigative resources. 
 
-1. We could utilize a department-wise plotting of overtime pay. This could be achieved with the help of a bar plot.
-2. Another approach would be to check the percentage of overpayment given to various buckets of regular pay. This could be achieved with the help of a pie chart.
 
-Overall, our objective of uncovering insights and patterns remains paramount, and we aim to identify interesting trends within the dataset.
 
-## Test Plan
-
-We aim to perform testing in a multitude of ways to prevent both bias and overly optimistic predictions. We approach the testing process as a multi-step procedure.
-
-1. To analyze the effectiveness of overtime payments, one approach that could be deployed during the testing process is to derive an actual figure concerning the expected overtime payments. The prediction process could be conducted separately for each department to prevent the introduction of outliers and to avoid the strain of one model attempting to capture patterns across all departments. By utilizing this testing methodology, we can capture the differences in payments and assess their significance.
-2. The testing process will not follow a standard 80-20 or 60-30-10 split. Instead, it will continuously utilize historical data to predict future information in segments. For example, we may use the last two months of data to predict two weeks into the future and repeat the process iteratively. Part of the testing phase experimentation will involve evaluating how well a mixture of experts model performs compared to a single model for all data. We aim to use metrics that capture discrepancies, such as MSE (which penalizes larger errors). MSE is particularly relevant since larger payment discrepancies correspond to higher financial losses.
-3. Beyond the supervised training phase, we also plan to utilize unsupervised methodologies like clustering. This will help us understand the various natural groupings within the dataset and determine if these clusters correlate with other feature distributions. The testing aspect of this will involve assessing the quality of clustering, which can be easily measured using metrics like the silhouette score.
-
-The testing phase is a crucial part of our project, as it dictates the overall quality of the output and the confidence in the deliverables we aim to present.
