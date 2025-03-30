@@ -2,6 +2,7 @@
 
 This is the project repository for CS 506: Computational Tools for Data Science
 
+
 ## Dataset Preprocessing :
 
 The cleaning process of the data started with the visualization of the data frame. The following points below highlights the steps taken.
@@ -19,6 +20,7 @@ The missing values within the dataframe were isolated. The missing values were l
 **_3. Datatypes :_**
 
 Numerical columns such as Year wise Budget were interpreted as “Object” Datatype. The respective columns were converted into a floating type datapoint for easier analysis and to extract the relevant statistics out of them.  
+
 
 ### **_Dataset 2 : Employees Earnings Data_**
 
@@ -142,3 +144,4 @@ Detail pay refers to compensation police officers receive for working private or
  From this plot we can see thaht non-BPD employees have had a more consistent increase in total earning as well a overtime earnings compared to the BPD employees, varying between 0-5% for total earnings and between 0-10% for overtime earnings. While BPD employees experience more volatility with regards to increases and decreases in paychecks as seen in the first plot. The overtime increases for BPD employees are more stable and varies only between 3-15%.
 
  ![alt text](./Plots/moving_average_increases.png)
+
