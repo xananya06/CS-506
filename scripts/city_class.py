@@ -21,6 +21,10 @@ city_corrections = {
 }
 df['city'] = df['city'].replace(city_corrections)
 
+<<<<<<< HEAD
+=======
+# Define urban and suburban lists
+>>>>>>> c46bfc0 (yashwanth_data)
 urban_cities = [
     'BOSTON', 'DORCHESTER', 'ROXBURY', 'JAMAICA PLAIN', 'EAST BOSTON',
     'MATTAPAN', 'SOUTH BOSTON', 'BRIGHTON', 'HYDE PARK', 'CHARLESTOWN',
