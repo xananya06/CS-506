@@ -2,7 +2,9 @@
 
 This is the project repository for CS 506: Computational Tools for Data Science
 
-## Dataset Preprocessing :
+## Dataset Cleaning :
+
+### **_Dataset 1 : Operating Budgets_**
 
 The cleaning process of the data started with the visualization of the data frame. The following points below highlights the steps taken.
 
