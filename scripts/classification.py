@@ -2,29 +2,23 @@ import pandas as pd
 import re
 import os
 
-# Get the script's directory and construct the file path
 script_dir = os.path.dirname(os.path.abspath(__file__))
 file_path = os.path.join(script_dir, 'fio_final.csv')
 
-# Read the CSV file with low_memory=False to avoid dtype warnings
 print("Looking for file at:", file_path)
 df = pd.read_csv(file_path, low_memory=False)
 
-# Debug: Check column names
 print("Column names:", df.columns.tolist())
 print("First few rows:\n", df.head())
 
-# Process the text column (assuming it’s "contact_reason"; adjust if different)
 if 'contact_reason' in df.columns:
-    df['contact_reason'] = df['contact_reason']  # Already correct, no need to reassign
+    df['contact_reason'] = df['contact_reason']  
 elif 'U' in df.columns:
     df['contact_reason'] = df['U']
 else:
-    # Fallback: Assume 21st column (index 20) if no headers match
     print("Assuming 21st column as contact_reason")
     df['contact_reason'] = df.iloc[:, 20]
 
-# Define categories and keywords
 categories = [
     ("Drug-Related", ["drug", "narcotics", "controlled substance", "heroin", "cocaine", "marijuana"]),
     ("Traffic Violation", ["traffic stop", "speeding", "red light", "stop sign", "vehicle code", "reckless driving"]),
@@ -51,11 +45,9 @@ categories = [
     ("Other", [])
 ]
 
-# Compile regex patterns
 patterns = [(cat, [re.compile(r'\b' + re.escape(kw) + r'\b', re.IGNORECASE) for kw in kws]) 
             for cat, kws in categories]
 
-# Function to assign a single category
 def assign_single_category(text):
     if not isinstance(text, str):
         return "Other"
@@ -67,11 +59,9 @@ def assign_single_category(text):
                 return category
     return "Other"
 
-# Apply to DataFrame
 df['primary_reason'] = df['contact_reason'].apply(assign_single_category)
 
-# Preview and save (use the actual column name based on debug output)
-# Replace 'contact_reason' below with 'U' or the correct name if different
+
 print(df[['contact_reason', 'primary_reason']].head())
 df.to_csv(os.path.join(script_dir, 'output_file.csv'), index=False)
 print("Processed data saved to output_file.csv")
