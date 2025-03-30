@@ -4,7 +4,7 @@ This is the project repository for CS 506: Computational Tools for Data Science
 
 ## Dataset Cleaning :
 
-#### **_Dataset 1 : Operating Budgets_**
+### **_Dataset 1 : Operating Budgets_**
 
 The cleaning process of the data started with the visualization of the data frame. The following points below highlights the steps taken.
 
@@ -23,7 +23,7 @@ Numerical columns such as Year wise Budget were interpreted as “Object” Data
 
 ## Outlier Detection :
 
-#### **_Dataset 1 : Operating Budgets_**
+### **_Dataset 1 : Operating Budgets_**
 
 ![alt text](Plots/Outlier.png)
 
@@ -32,7 +32,7 @@ InterQuartile Range (IQR) was used to detect the outliers. Each of the numerical
 
 ## Visualization and Insights :
 
-#### **_Dataset 1 : Operating Budgets_**
+### **_Dataset 1 : Operating Budgets_**
 
 Boston Police Department has undergone varying shifts between the years 2022 and 2025. While the overall budget has indeed increase between the given time frames, there are certain expense categories and intra-department allocations that have experienced significant fluctuations and changes. 
 
