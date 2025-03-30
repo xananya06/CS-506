@@ -44,7 +44,7 @@ The overall budget has increased from 2022 to 2025 for most of the departments. 
 
 The below diagram highlights the increase/decrease in budgets across departments between 2022-2025
 
-![alt text](./Plots/2022-2025 Department Budget Inc:Dec.png)
+![alt text](./Plots/2022_2025_Department_Budget_Change.png)
 
 
 _**2. Significant areas where budget was reduced :**_
@@ -82,7 +82,7 @@ Bureau of Community Engagement saw a growth between 2022-2024 and from 2024-2025
 
 The below diagram highlights the increase/decrease in budgets across departments between 2024-2025
 
-![alt text](./Plots/2024-2025 Department Budget Inc:Dec.png)
+![alt text](./Plots/2024_2025_Department_Budget_Change.png)
 
 The personnel services under the Bureau of Intelligence and Analysis saw a major decrease in its funding. The budget for this department started mildly recovering from 2024.
 
