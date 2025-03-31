@@ -38,6 +38,20 @@ The majority of missing values were seen in columns where a employee did not rec
 
 Finally, the zip codes were adjusted to be all in the same format, which can be used to see difference in average earnings for each zip code in the state of Massachusetts.
 
+### **_Dataset 3 : Field Interrogation and Observation_**
+
+
+**_1.Filtering :_**
+The dataset was preprocessed by removing duplicate records and unnecessary columns, ensuring that only relevant information remains. A year column was added to distinguish records from different files when combining multiple datasets. Additionally, invalid or inconsistent entries in categorical and numerical fields were cleaned and standardized.
+
+**_2. Missing values :_**
+Columns with missing values were filled with NaN where appropriate. For categorical fields like weather, missing values were retained as NaN to indicate no recorded information. In numerical fields, values were converted to proper data types, and records with excessive missing data were reviewed.
+
+**_3. Features :_**
+Several new features were engineered to enhance the analysis. These include day of the week, time of day, stop duration category, whether the stop occurred on a weekend, and whether it was a vehicle interaction. Other features like total contacts per area and supervisor involvement were also derived to support further exploration. These new variables help in analyzing trends and behavior patterns.
+
+**_4. Text Classification :_**
+The contact_reason column, which contains text descriptions of why an interaction occurred, was processed using text classification techniques to categorize common reasons. To extract keywords from the "contact_reason" column and create a new column, used a keyword-based approach with regular expressions. Define categories with associated keywords, match them against the text, and assign all relevant categories to each record. This method transforms the detailed narratives into concise, actionable reasons, enabling you to produce graphs and explore correlations effectively.
 
 ## Outlier Detection :
 
@@ -53,6 +67,11 @@ InterQuartile Range (IQR) was used to detect the outliers. Each of the numerical
 
 Similarly, for the second dataset the same approach was followed using IQR. This process was followed for the numerical features, and was also only used for entries which did not contain 0 values, as many columns had a large amount of rows which were 0. No extreme outliers had been identified that had to be removed or adapted.
 
+### **_Dataset 3 : Field Interrogation and Observation_**
+
+![alt text](./fio_plots/outliers_violin.png)
+
+I used violin plot as it combines a box plot and a density plot, showing the distribution, median, quartiles, and outliers. The width represents data frequency, while whiskers and points outside indicate outliers. Unlike box plots, it visualizes skewness and multiple peaks, providing a clearer view of data spread. This makes it ideal for detecting outliers and understanding distribution patterns in dataset.
 
 ## Visualization and Insights :
 
@@ -168,6 +187,47 @@ Detail pay refers to compensation police officers receive for working private or
 The second part of this was to investigate the total injury pay across the BPD. As we can see from the graph below, the average and total injury pay follow a similar trend from 2011 to 2024. The only noticeable difference is that in 2024, although there is a slight increase in total injury pay, the average injury pay went down by more than 50%. This is very interesting as we saw from the first point, that more people took injury pay in 2024, but the total increase in injury pay was not significant. This shows that it might not be a cause for concern, as the total injury pay seems relatively normal, but the large number of people taking injury pay might still need to be investigated.
 
 ![alt text](./Plots/BPD_injury_pay.png)
+
+
+### **_4: Field Interrogation and Observation_**
+
+**_1. Frequency of Primary Reasons:_**
+
+The bar chart of primary reasons reveals that "Drug-Related" stops dominate the dataset, followed by "Traffic Violation" and "Weapons violation." This suggests a strong focus on drug enforcement within BPD’s FIO activities, with over half of all interactions potentially linked to narcotics. Less frequent reasons like "Warrant Check" or "Prostitution" indicate targeted rather than routine policing efforts. The distribution highlights resource allocation priorities, with drug-related issues as a central concern.
+
+![alt text](./fio_plots/Fio_Primary_Reason.png)
+
+**_2. Summons Issued by Primary Reason:_**
+
+The stacked bar chart shows that "Drug related" stops have the highest summons issuance rate, often exceeding 30%, due to clear legal violations. In contrast, "traffic violation" stops, despite their frequency, result in fewer summons—less than 20%—suggesting observation or investigation over immediate enforcement. The reamining issues rarely leads to summons, indicating these stops are precautionary. This variation reflects differing enforcement strategies across reasons.
+
+![alt text](./fio_plots/Summons_Issued.png)
+
+**_3. Time of Day Patterns:_**
+
+The bar chart of time-of-day patterns indicates that "Night" stops are the most common, comprising nearly 40% of interactions, likely tied to nightlife or low-visibility conditions. "Evening" and "Afternoon" follow, with "Morning" stops being the least frequent, under 15%. This suggests heightened police activity during darker hours, possibly targeting drug or disorderly conduct issues. The pattern underscores temporal resource deployment in BPD operations.
+
+![alt text](./fio_plots/time_of_day_stops.png)
+
+**_4. Vehicle Type Involvement:_**
+The bar chart of vehicle types shows "SUV (Sport Utility Vehicle)" and "Passenger car (Sedan)" as the most frequently involved, each accounting for over 30% of vehicle-related stops. "Pickup" and "Van" appear less often, under 10% combined, reflecting common vehicle ownership in the area.This distribution suggests a focus on typical civilian vehicles rather than specialized ones.
+
+![alt text](./fio_plots/top10_vehicletypes.png)
+
+**_5. Top 10 cities by fio stops:_**
+The top 10 cities by FIO stops are dominated by Boston and its neighborhoods, with Boston itself leading at over 13,000 stops, followed by Dorchester and Roxbury with 5,467 and 3,234 stops, respectively. This concentration reflects higher police activity in densely populated urban areas, likely tied to crime hotspots or population density. Neighborhoods like Jamaica Plain and East Boston, with 903 and 836 stops, show significant but lower activity, suggesting varied enforcement focus. The prevalence of urban areas in the top 10 aligns with the dataset’s urban/suburban classification, emphasizing BPD’s focus on city-center interactions.
+
+![alt text](./fio_plots/top10_city_stops.png)
+
+**_6.Primary Reason Trends Over Time:_**
+The stacked area plot tracks reasons over months, showing "Traffic violations" stops consistently leading, with periodic spikes (eg: mid-2020) suggesting targeted operations. "Drug related" peaks intermittently, possibly tied to seasonal campaigns, while "Suspicious Behavior" remains steady but lower. Fluctuations in less common reasons like "Warrant Check" indicate sporadic enforcement focus. This temporal view reveals evolving policing priorities over the dataset’s timeframe.
+
+![alt text](./fio_plots/Primary_Reason_trends.png)
+
+
+
+
+
 
 
 ### **_5: Responsive Record_**
