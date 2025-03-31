@@ -179,8 +179,7 @@ There are 2229 details of police officers with 1457 white officers followed by 4
 
 Numerical columns contain hourly values and the categorical values contain job title, union code, ethnic group and sex.
 
-
-**5. Are certain officers more likely than others to have lower worked-to-paid ratios?**
+**Are certain officers more likely than others to have lower worked-to-paid ratios?**
 
 
 ![image](https://github.com/user-attachments/assets/961256c5-5700-40bb-9886-e6c3fa9723b1)
@@ -189,6 +188,6 @@ White and Black officers are more likely to earn higher paid to worked ratios th
 
 ![image](https://github.com/user-attachments/assets/ccafbcd4-bb1e-4269-8a9e-92ea6e730731)
 
-
+Number of hours per month worked is higher for the same officers that get paid the highest with them working under 165 hrs/month with the rest working at the rate of 170 hrs/month.
 
 
