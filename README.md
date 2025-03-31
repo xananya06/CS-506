@@ -170,6 +170,15 @@ The second part of this was to investigate the total injury pay across the BPD. 
 ![alt text](./Plots/BPD_injury_pay.png)
 
 
+### **_5: Responsive Record_**
+1. Data Information :
+
+There are 2229 details of police officers with 1457 white officers followed by 485 black officers. There are only 308 female officers in comparision to 1921 male officers. The dataset is highly imbalanced and must be taken into consideration before modeling.
+
+2. Datatypes :
+
+Numerical columns contain hourly values and the categorical values contain job title, union code, ethnic group and sex.
+
 
 **5. Are certain officers more likely than others to have lower worked-to-paid ratios?**
 
@@ -178,7 +187,8 @@ The second part of this was to investigate the total injury pay across the BPD. 
 
 White and Black officers are more likely to earn higher paid to worked ratios than asian and hispanic officers. The reason for it being more white and black officers are at higher positions. With respect to male and female officers, they earn the same on average. The pay of student officers is an anomaly with them earning signifficantly less for an hour when compared to other officers. Supn In Chief, Bureau Admin and Technology, Bureau of Professional Standards, Bureau of Professional Development, Night Commands earn the most per hour with them over $100/hr. Hispanic officers work over 160 hours more than White officers for an year. This could be a direct effect of more white officers being at higher level when compared to Hispanic officers.
 
-
 ![image](https://github.com/user-attachments/assets/ccafbcd4-bb1e-4269-8a9e-92ea6e730731)
+
+
 
 
