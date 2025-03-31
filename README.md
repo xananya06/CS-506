@@ -2,6 +2,7 @@
 
 This is the project repository for CS 506: Computational Tools for Data Science
 
+
 ## Dataset Preprocessing :
 
 The cleaning process of the data started with the visualization of the data frame. The following points below highlights the steps taken.
@@ -45,6 +46,12 @@ Finally, the zip codes were adjusted to be all in the same format, which can be 
 ![alt text](Plots/Outlier.png)
 
 InterQuartile Range (IQR) was used to detect the outliers. Each of the numerical feature columns 3rd Quartile and 1st Quartile were obtained and then the values exceeding the quartile and the IQR*1.5 combined were identified. Post that, Manual eyeballing of the data to confirm if indeed the presented values were outliers was used. 
+
+### **_Dataset 2 : Employees Earnings Data_**
+
+![alt text](./Plots/OutliersEmployees.png)
+
+Similarly, for the second dataset the same approach was followed using IQR. This process was followed for the numerical features, and was also only used for entries which did not contain 0 values, as many columns had a large amount of rows which were 0. No extreme outliers had been identified that had to be removed or adapted.
 
 
 ## Visualization and Insights :
