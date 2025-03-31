@@ -2,7 +2,8 @@
 
 This is the project repository for CS 506: Computational Tools for Data Science
 
-## Dataset Cleaning :
+
+## Dataset Preprocessing :
 
 The cleaning process of the data started with the visualization of the data frame. The following points below highlights the steps taken.
 
@@ -19,6 +20,7 @@ The missing values within the dataframe were isolated. The missing values were l
 **_3. Datatypes :_**
 
 Numerical columns such as Year wise Budget were interpreted as “Object” Datatype. The respective columns were converted into a floating type datapoint for easier analysis and to extract the relevant statistics out of them.  
+
 
 ### **_Dataset 2 : Employees Earnings Data_**
 
@@ -148,3 +150,21 @@ Detail pay refers to compensation police officers receive for working private or
  From this plot we can see thaht non-BPD employees have had a more consistent increase in total earning as well a overtime earnings compared to the BPD employees, varying between 0-5% for total earnings and between 0-10% for overtime earnings. While BPD employees experience more volatility with regards to increases and decreases in paychecks as seen in the first plot. The overtime increases for BPD employees are more stable and varies only between 3-15%.
 
  ![alt text](./Plots/moving_average_increases.png)
+
+
+ ### **_3: Injury Pay_**
+
+ This part of the analysis was to see what trends involving injury pay can be determined, and to see what percentage of BPD employees took injury pay in a current year.
+
+ **_1. Number of employees taking Injury Pay :_**
+
+ The following two graphs show the number of BPD employees which took injury pay in a given year. As we can see, in 2024 32% of employees registered with the BPD took injury pay. This is a extremely large increase relative to previous year, as seen in the second graph. The second graph illustrates the number of employees who took injury pay and those who did not, from 2011 to 2024. This was the first year where more than 1000 employees took injury pay. This might be a reason to do a internal investigation, as to why there is a sudden increase in number of employees who take injury pay in this given year.
+
+
+ ![alt text](./Plots/injury_pay_amount_BPD.png)
+
+**_2. How much BPD pay came from injury pay:_**
+
+The second part of this was to investigate the total injury pay across the BPD. As we can see from the graph below, the average and total injury pay follow a similar trend from 2011 to 2024. The only noticable difference is that in 2024, although there is a slight increase in total injury pay, the average injury pay went down by more than 50%. This is very interesting as we saw from the first point, that more people took injury pay in 2024 but the total increase in injury pay was not significant. This shows that it might not be a cause for concern as the total injury pay seems relatively normal, but the large number of people taking injury pay might still need to be investigated.
+
+![alt text](./Plots/BPD_injury_pay.png)
