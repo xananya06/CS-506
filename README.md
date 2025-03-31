@@ -3,6 +3,10 @@
 This is the project repository for CS 506: Computational Tools for Data Science
 
 
+## Link to Presentation
+
+https://youtu.be/2GusWFGZqok
+
 ## Dataset Preprocessing :
 
 The cleaning process of the data started with the visualization of the data frame. The following points below highlights the steps taken.
