@@ -168,3 +168,17 @@ Detail pay refers to compensation police officers receive for working private or
 The second part of this was to investigate the total injury pay across the BPD. As we can see from the graph below, the average and total injury pay follow a similar trend from 2011 to 2024. The only noticable difference is that in 2024, although there is a slight increase in total injury pay, the average injury pay went down by more than 50%. This is very interesting as we saw from the first point, that more people took injury pay in 2024 but the total increase in injury pay was not significant. This shows that it might not be a cause for concern as the total injury pay seems relatively normal, but the large number of people taking injury pay might still need to be investigated.
 
 ![alt text](./Plots/BPD_injury_pay.png)
+
+
+
+**5. Are certain officers more likely than others to have lower worked-to-paid ratios?**
+
+
+![image](https://github.com/user-attachments/assets/961256c5-5700-40bb-9886-e6c3fa9723b1)
+
+White and Black officers are more likely to earn higher paid to worked ratios than asian and hispanic officers. The reason for it being more white and black officers are at higher positions. With respect to male and female officers, they earn the same on average. The pay of student officers is an anomaly with them earning signifficantly less for an hour when compared to other officers. Supn In Chief, Bureau Admin and Technology, Bureau of Professional Standards, Bureau of Professional Development, Night Commands earn the most per hour with them over $100/hr. Hispanic officers work over 160 hours more than White officers for an year. This could be a direct effect of more white officers being at higher level when compared to Hispanic officers.
+
+
+![image](https://github.com/user-attachments/assets/ccafbcd4-bb1e-4269-8a9e-92ea6e730731)
+
+
