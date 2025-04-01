@@ -115,7 +115,7 @@ Boston Police Department has undergone varying shifts between the years 2022 and
 
 The overall budget has increased from 2022 to 2025 for most of the departments. This suggests an increased emphasis on most of the department activities. The increase has been seen on various expense categories ranging from equipments to personnel across which the trend is overall increasing however with notable fluctuations.
 
-The below diagram highlights the increase/decrease in budgets across departments between 2022-2025
+The below diagram highlights the increase/decrease in budgets across departments between 2022-2025 (X-axis Scaled 0-1)
 
 ![alt text](./Plots/2022_2025_Department_Budget_Change.png)
 
@@ -153,7 +153,7 @@ Most of the department saw an increase in their budgets from 2022 to 2025 except
 
 Bureau of Community Engagement saw a growth between 2022-2024 and from 2024-2025, a cut in budget has been observed.
 
-The below diagram highlights the increase/decrease in budgets across departments between 2024-2025
+The below diagram highlights the increase/decrease in budgets across departments between 2024-2025 (X-axis Scaled 0-1)
 
 ![alt text](./Plots/2024_2025_Department_Budget_Change.png)
 
