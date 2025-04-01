@@ -57,6 +57,20 @@ Several new features were engineered to enhance the analysis. These include day 
 **_4. Text Classification :_**
 The contact_reason column, which contains text descriptions of why an interaction occurred, was processed using text classification techniques to categorize common reasons. To extract keywords from the "contact_reason" column and create a new column, used a keyword-based approach with regular expressions. Define categories with associated keywords, match them against the text, and assign all relevant categories to each record. This method transforms the detailed narratives into concise, actionable reasons, enabling you to produce graphs and explore correlations effectively.
 
+### **_Dataset 4 : Overtime Details_**
+
+**_1. Consolidation :_**
+
+The dataset consisted of multiple duplicate columns for the same information (ID, officer names, ranks) spread across 66 original columns. Columns were consolidated by priority order, with multiple ID columns merged into a single Employee_ID field with 100% coverage, reducing to 28 columns while preserving key information.
+
+**_2. Missing values :_**
+
+Missing values were prevalent across multiple fields. The most critical field (officer identification) was addressed by consolidating four different ID columns (ID, Emp_No, Emp. ID, IDNO6) with coverage rates ranging from 3.4% to 73.8%, resulting in a combined field with 100% coverage.
+
+**_3. Datatypes :_**
+
+Temporal data including overtime_date was interpreted as "Object" datatype. These columns were converted to datetime format to enable extraction of year, month, and day components for time-based analysis. Additionally, the rank field showed mixed datatypes with numerical ranks (3.0-9.0) averaging 400-500 hours versus text ranks (Ptl, Det, Sergt) averaging only 4-5 hours, indicating inconsistent coding systems.
+
 ## Outlier Detection :
 
 ### **_Dataset 1 : Operating Budgets_**
@@ -76,6 +90,18 @@ Similarly, for the second dataset the same approach was followed using IQR. This
 ![alt text](./fio_plots/outliers_violin.png)
 
 I used violin plot as it combines a box plot and a density plot, showing the distribution, median, quartiles, and outliers. The width represents data frequency, while whiskers and points outside indicate outliers. Unlike box plots, it visualizes skewness and multiple peaks, providing a clearer view of data spread. This makes it ideal for detecting outliers and understanding distribution patterns in dataset.
+
+### **_Dataset 4 : Overtime Details_**
+
+![alt text](./fio_plots/outliers_violin.png)
+
+The yearly breakdown shows significant variation:
+
+2012-2013: Very low average hours (around 5-6 hours)
+2014-2017: High average hours (up to 581 hours)
+2018-2022: Moderate but still significant hours (350-527 hours)
+
+The script found only 16 outliers (0.003% of the sample), with the highest being 1800 hours, mostly associated with overtime type "C" (which appears to be a standard code) and "Z".
 
 ## Visualization and Insights :
 
@@ -228,7 +254,25 @@ The stacked area plot tracks reasons over months, showing "Traffic violations" s
 
 ![alt text](./fio_plots/Primary_Reason_trends.png)
 
+### **_4: Overtime Details_**
 
+**_1. Monthly Overtime Payments by Year:_**
+
+This line graph shows the month-by-month overtime payment patterns across three consecutive years. 2020 shows extreme volatility with peaks in January and October and dramatic drops in April and November. 2021 had its highest payments in March (~$33 million), while 2022 shows generally lower, more stable payment patterns with less variation between months.
+
+![alt text](./fio_plots/Fio_Primary_Reason.png)
+
+**_2. Overtime Budget vs. Actual Payments :_**
+
+This bar chart compares budgeted overtime amounts against actual expenditures across three years. In 2020 and 2021, actual overtime payments significantly exceeded budgeted amounts by approximately $40 million each year, indicating consistent underbudgeting. By 2022, this pattern reversed, with actual payments coming in under budget, suggesting improved budget planning or reduced overtime utilization.
+
+![alt text](./fio_plots/Summons_Issued.png)
+
+**_3. Distribution of Overtime Hours Worked:_**
+
+This histogram reveals a bimodal distribution of overtime hours with two distinct peaks. The highest frequency occurs at very low hours (0-50), representing over 150,000 instances, while a second significant cluster appears between 450-750 hours. This pattern suggests two different overtime usage behaviors: occasional/minimal overtime for most personnel versus a substantial subset working extensive overtime hours.
+
+![alt text](./fio_plots/time_of_day_stops.png)
 
 
 
