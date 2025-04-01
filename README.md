@@ -87,7 +87,7 @@ Similarly, for the second dataset the same approach was followed using IQR. This
 
 ### **_Dataset 3 : Field Interrogation and Observation_**
 
-![alt text](./fio_plots/outliers_violin.png)
+![alt text](./plots/outliers_violin.png)
 
 I used violin plot as it combines a box plot and a density plot, showing the distribution, median, quartiles, and outliers. The width represents data frequency, while whiskers and points outside indicate outliers. Unlike box plots, it visualizes skewness and multiple peaks, providing a clearer view of data spread. This makes it ideal for detecting outliers and understanding distribution patterns in dataset.
 
@@ -225,34 +225,34 @@ The second part of this was to investigate the total injury pay across the BPD. 
 
 The bar chart of primary reasons reveals that "Drug-Related" stops dominate the dataset, followed by "Traffic Violation" and "Weapons violation." This suggests a strong focus on drug enforcement within BPD’s FIO activities, with over half of all interactions potentially linked to narcotics. Less frequent reasons like "Warrant Check" or "Prostitution" indicate targeted rather than routine policing efforts. The distribution highlights resource allocation priorities, with drug-related issues as a central concern.
 
-![alt text](./fio_plots/Fio_Primary_Reason.png)
+![alt text](./plots/Fio_Primary_Reason.png)
 
 **_2. Summons Issued by Primary Reason:_**
 
 The stacked bar chart shows that "Drug related" stops have the highest summons issuance rate, often exceeding 30%, due to clear legal violations. In contrast, "traffic violation" stops, despite their frequency, result in fewer summons—less than 20%—suggesting observation or investigation over immediate enforcement. The reamining issues rarely leads to summons, indicating these stops are precautionary. This variation reflects differing enforcement strategies across reasons.
 
-![alt text](./fio_plots/Summons_Issued.png)
+![alt text](./plots/Summons_Issued.png)
 
 **_3. Time of Day Patterns:_**
 
 The bar chart of time-of-day patterns indicates that "Night" stops are the most common, comprising nearly 40% of interactions, likely tied to nightlife or low-visibility conditions. "Evening" and "Afternoon" follow, with "Morning" stops being the least frequent, under 15%. This suggests heightened police activity during darker hours, possibly targeting drug or disorderly conduct issues. The pattern underscores temporal resource deployment in BPD operations.
 
-![alt text](./fio_plots/time_of_day_stops.png)
+![alt text](./plots/time_of_day_stops.png)
 
 **_4. Vehicle Type Involvement:_**
 The bar chart of vehicle types shows "SUV (Sport Utility Vehicle)" and "Passenger car (Sedan)" as the most frequently involved, each accounting for over 30% of vehicle-related stops. "Pickup" and "Van" appear less often, under 10% combined, reflecting common vehicle ownership in the area.This distribution suggests a focus on typical civilian vehicles rather than specialized ones.
 
-![alt text](./fio_plots/top10_vehicletypes.png)
+![alt text](./plots/top10_vehicletypes.png)
 
 **_5. Top 10 cities by fio stops:_**
 The top 10 cities by FIO stops are dominated by Boston and its neighborhoods, with Boston itself leading at over 13,000 stops, followed by Dorchester and Roxbury with 5,467 and 3,234 stops, respectively. This concentration reflects higher police activity in densely populated urban areas, likely tied to crime hotspots or population density. Neighborhoods like Jamaica Plain and East Boston, with 903 and 836 stops, show significant but lower activity, suggesting varied enforcement focus. The prevalence of urban areas in the top 10 aligns with the dataset’s urban/suburban classification, emphasizing BPD’s focus on city-center interactions.
 
-![alt text](./fio_plots/top10_city_stops.png)
+![alt text](./plots/top10_city_stops.png)
 
 **_6.Primary Reason Trends Over Time:_**
 The stacked area plot tracks reasons over months, showing "Traffic violations" stops consistently leading, with periodic spikes (eg: mid-2020) suggesting targeted operations. "Drug related" peaks intermittently, possibly tied to seasonal campaigns, while "Suspicious Behavior" remains steady but lower. Fluctuations in less common reasons like "Warrant Check" indicate sporadic enforcement focus. This temporal view reveals evolving policing priorities over the dataset’s timeframe.
 
-![alt text](./fio_plots/Primary_Reason_trends.png)
+![alt text](./plots/Primary_Reason_trends.png)
 
 ### **_5: Overtime Details_**
 
