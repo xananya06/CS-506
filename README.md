@@ -260,19 +260,19 @@ The stacked area plot tracks reasons over months, showing "Traffic violations" s
 
 This line graph shows the month-by-month overtime payment patterns across three consecutive years. 2020 shows extreme volatility with peaks in January and October and dramatic drops in April and November. 2021 had its highest payments in March (~$33 million), while 2022 shows generally lower, more stable payment patterns with less variation between months.
 
-![alt text](./fio_plots/Fio_Primary_Reason.png)
+![alt text](monthly_overtime_by_year.png)
 
 **_2. Overtime Budget vs. Actual Payments :_**
 
 This bar chart compares budgeted overtime amounts against actual expenditures across three years. In 2020 and 2021, actual overtime payments significantly exceeded budgeted amounts by approximately $40 million each year, indicating consistent underbudgeting. By 2022, this pattern reversed, with actual payments coming in under budget, suggesting improved budget planning or reduced overtime utilization.
 
-![alt text](./fio_plots/Summons_Issued.png)
+![alt text](budget_vs_actual.png)
 
 **_3. Distribution of Overtime Hours Worked:_**
 
 This histogram reveals a bimodal distribution of overtime hours with two distinct peaks. The highest frequency occurs at very low hours (0-50), representing over 150,000 instances, while a second significant cluster appears between 450-750 hours. This pattern suggests two different overtime usage behaviors: occasional/minimal overtime for most personnel versus a substantial subset working extensive overtime hours.
 
-![alt text](./fio_plots/time_of_day_stops.png)
+![alt text](hours_distribution.png)
 
 
 
