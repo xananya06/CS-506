@@ -93,7 +93,7 @@ I used violin plot as it combines a box plot and a density plot, showing the dis
 
 ### **_Dataset 4 : Overtime Details_**
 
-![alt text](./fio_plots/outliers_violin.png)
+![alt text](yearly_avg_hours.png)
 
 The yearly breakdown shows significant variation:
 
