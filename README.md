@@ -95,11 +95,11 @@ I used violin plot as it combines a box plot and a density plot, showing the dis
 
 ![alt text](yearly_avg_hours.png)
 
-The yearly breakdown shows significant variation:
+The yearly breakdown shows significant variation:<br/>
 
-2012-2013: Very low average hours (around 5-6 hours)
-2014-2017: High average hours (up to 581 hours)
-2018-2022: Moderate but still significant hours (350-527 hours)
+2012-2013: Very low average hours (around 5-6 hours)<br/>
+2014-2017: High average hours (up to 581 hours)<br/>
+2018-2022: Moderate but still significant hours (350-527 hours)<br/>
 
 The script found only 16 outliers (0.003% of the sample), with the highest being 1800 hours, mostly associated with overtime type "C" (which appears to be a standard code) and "Z".
 
