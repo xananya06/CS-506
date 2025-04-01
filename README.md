@@ -254,7 +254,7 @@ The stacked area plot tracks reasons over months, showing "Traffic violations" s
 
 ![alt text](./fio_plots/Primary_Reason_trends.png)
 
-### **_4: Overtime Details_**
+### **_5: Overtime Details_**
 
 **_1. Monthly Overtime Payments by Year:_**
 
@@ -278,7 +278,7 @@ This histogram reveals a bimodal distribution of overtime hours with two distinc
 
 
 
-### **_5: Responsive Record_**
+### **_6: Responsive Record_**
 1. Data Information :
 
 There are 2229 details of police officers with 1457 white officers followed by 485 black officers. There are only 308 female officers in comparision to 1921 male officers. The dataset is highly imbalanced and must be taken into consideration before modeling.
