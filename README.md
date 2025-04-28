@@ -307,9 +307,11 @@ Number of hours per month worked is higher for the same officers that get paid t
 
 Firstly, overtime prediction for the following year as well as the total earnings prediction for the following year which will be compared with the budget of the BPD for 2025. For this problem, we relied on 3 different models to give us 3 different predictions and to choose a optimal range to report. Due to having limited data, only from the years 2011 to 2024, this does give us many data points to use for predictions, thus 3 models were chosen to ensure that are results can be seen as reasonably accurate. 
 
- These models consisted of a simple linear regression model, and two time series models. The first time series, [Prophet](https://facebook.github.io/prophet/), developed by Meta, is based on a additive model where non-linear trends are fit for data. The second time series model we chose to fit, was Holt-Winters. Since we are wworking with time series data, the train/validation and test split had to be sequesntial. The years 2011-2021 was chosen as training data, 2022-2023 as validation, and then 2024 as test data. Finally, after the model is trained, a future prediction will be made on the year 2025 which will be compared to the budget. 
+ These models consisted of a simple linear regression model, and two time series models. The first time series, [Prophet](https://facebook.github.io/prophet/), developed by Meta, is based on a additive model where non-linear trends are fit for data. The second time series model we chose to fit, was Holt-Winters. Since we are wworking with time series data, the train/validation and test split had to be sequential. The years 2011-2021 was chosen as training data, 2022-2023 as validation, and then 2024 as test data. Finally, after the model is trained, a future prediction will be made on the year 2025 which will be compared to the budget. 
 
- The modelling results and plots can be seen below. For Linear Regression and Holt Winters, there were no hyperparameters to be tuned and the validation set wasn't used. For Pophet, hyperparameter optimization was run to find the optimal hyperparameters of the model. As we can see from the model performance, Prophet had the lowest Mean Absolute Error, but Holt Winters performed better than Prophet and LR on the test MAE. From these models, we can see the forecasted total overtime for 2025 is between $95 million and $100 million. 
+ The modelling results and plots can be seen below. For Linear Regression and Holt Winters, there were no hyperparameters to be tuned and the validation set wasn't used. For Pophet, hyperparameter optimization was run to find the optimal hyperparameters of the model. These included finding the hyperparameters for the prior values as well as the type of seasonility. A gridsearch was performed and the parameters with lowest validation MAE was chosen as the final parameters. 
+ 
+ As we can see from the model performance, Prophet had the lowest mean absolute error on our validation set, but Holt Winters performed better than Prophet and LR on the test set. From these models, we can see the forecasted total overtime for 2025 is between $95 million and $100 million. 
 
 | Metric                              | Linear Regression       | Prophet                                                                                     | Holt-Winters       |
 |-------------------------------------|-------------------------|---------------------------------------------------------------------------------------------|--------------------|
@@ -317,15 +319,16 @@ Firstly, overtime prediction for the following year as well as the total earning
 | Test MAE (2024)                     | $11,469,111.15          | $11,396,486.70         | $5,593,698.32      |
 | Forecasted Overtime for 2025        | $95,294,581.17          | $95,334,902.95                                                                              | $101,764,065.97    |
 
-![alt text](Plots/LROvertime.png)
+<img src="Plots/LROvertime.png" width="300"/> <img src="Plots/ProphetOvertimeHyper.png" width="300"/> <img src="Plots/holtwintersOvertime.png" width="300"/>
 
-![alt text](Plots/ProphetOvertimeHyper.png)
 
-![alt text](Plots/holtwintersOvertime.png)
+Since Prophet performed the best on the validation set, we also plotted a 95% confidence interval for the future prediction, to give a range of values the model predicts with a 95% certainty that the overtime will be in that range for the year 2025. For the 95% confidence interval range, the values range from $86 million to $104 million. This value range also agrees with the other 2 models we used while predicting a single value, so we can assume this will be a reasonably accurate prediction for 2025. Although the prediction of our test case from 2024 falls outside the 95% confidence interval range, as mentioned in the previous data exploration section this was an anomaly and we believe this will still be accurate for 2025. 
 
-Since Prophet performed the best on the validation set, we also plotted a 95% confidence interval for the future prediction, to give a range of values the model predicts with a 95% certainty that the overtime will be in that range. For the 95% confidence interval range, the values range from $86 million to $104 million. This value range also agrees with the other 2 models we used, so we can assume this will be a reasonably accurate prediction for 2025. TODO: Compare with budget from Yuri.
+TODO: Compare with budget from Yuri.
 
 ![alt text](Plots/ProphetCI.png)
+
+
 
 
 
