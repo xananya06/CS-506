@@ -319,7 +319,9 @@ Firstly, overtime prediction for the following year as well as the total earning
 | Test MAE (2024)                     | $11,469,111.15          | $11,396,486.70         | $5,593,698.32      |
 | Forecasted Overtime for 2025        | $95,294,581.17          | $95,334,902.95                                                                              | $101,764,065.97    |
 
-<img src="Plots/LROvertime.png" width="300"/> <img src="Plots/ProphetOvertimeHyper.png" width="300"/> <img src="Plots/holtwintersOvertime.png" width="300"/>
+<img src="Plots/LROvertime.png" width="400"/> <img src="Plots/ProphetOvertimeHyper.png" width="400"/>
+
+ <img src="Plots/holtwintersOvertime.png" width="400"/>
 
 
 Since Prophet performed the best on the validation set, we also plotted a 95% confidence interval for the future prediction, to give a range of values the model predicts with a 95% certainty that the overtime will be in that range for the year 2025. For the 95% confidence interval range, the values range from $86 million to $104 million. This value range also agrees with the other 2 models we used while predicting a single value, so we can assume this will be a reasonably accurate prediction for 2025. Although the prediction of our test case from 2024 falls outside the 95% confidence interval range, as mentioned in the previous data exploration section this was an anomaly and we believe this will still be accurate for 2025. 
