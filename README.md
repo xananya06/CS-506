@@ -324,14 +324,39 @@ Firstly, overtime prediction for the following year as well as the total earning
  <img src="Plots/holtwintersOvertime.png" width="400"/>
 
 
-Since Prophet performed the best on the validation set, we also plotted a 95% confidence interval for the future prediction, to give a range of values the model predicts with a 95% certainty that the overtime will be in that range for the year 2025. For the 95% confidence interval range, the values range from $86 million to $104 million. This value range also agrees with the other 2 models we used while predicting a single value, so we can assume this will be a reasonably accurate prediction for 2025. Although the prediction of our test case from 2024 falls outside the 95% confidence interval range, as mentioned in the previous data exploration section this was an anomaly and we believe this will still be accurate for 2025. 
-
-TODO: Compare with budget from Yuri.
+Since Prophet performed the best on the validation set, we also plotted a 95% confidence interval for the future prediction, to give a range of values the model predicts with a 95% certainty that the overtime will be in that range for the year 2025. For the 95% confidence interval range, the values range from $86 million to $104 million. This value range also agrees with the other 2 models we used while predicting a single value, so we can assume this will be a reasonably accurate prediction for 2025. Although the prediction of our test case from 2024 falls outside the 95% confidence interval range, as mentioned in the previous data exploration section this was an anomaly and we believe this will still be accurate for 2025.
 
 ![alt text](Plots/ProphetCI.png)
 
 
 
+### 2: Modelling Discrimination
+
+The purpose of this modelling is to figure out gender disparities within different job titles. The analysis was done on top 20 high ranking roles among the many present within the dataset.
+
+#### Chi-Square Test Results (Testing if Distribution Differs from 50/50 Split)
+
+| Job Title                        | Chi-Square | p-value | Male Count | Female Count | Total | Significant |
+|----------------------------------|------------|---------|------------|--------------|--------|-------------|
+| Police_Lieutenant               | 22.6154    | 0.0000  | 45         | 2            | 47     | Yes         |
+| Police_Lieutenant__Det_         | 5.8333     | 0.0157  | 18         | 2            | 20     | Yes         |
+| Dep_Supn__Bpd_                  | 5.5556     | 0.0184  | 12         | 0            | 12     | Yes         |
+| Police_Captain_DDC              | 4.3750     | 0.0365  | 13         | 1            | 14     | Yes         |
+| Supn_Bpd                        | 2.1429     | 0.1432  | 9          | 1            | 10     | No          |
+| Police_Sergeant_Comm_Serv_Offc | 1.1636     | 0.2807  | 7          | 1            | 8      | No          |
+| Police_Captain                  | 0.1099     | 0.7403  | 4          | 1            | 5      | No          |
+
+
+The below plot clusters the 20 most important job roles on the basis of sex and the count in each.
+
+One interesting insight that can be observed and derived from this include the fact that for many a important roles, there exists quite significant disparity among the gender.
+
+Roles such as Police Lieutenant and Deputy Superintendent  are amongst the high ranking roles with significant gender disparities.
+
+
+
+
+![alt text](Plots/Gender.png)
 
 
 
