@@ -301,7 +301,7 @@ Number of hours per month worked is higher for the same officers that get paid t
 ## Modelling :
 
 
- ### 1: Overtime Prediction
+ ### 1.1: Overtime Future Prediction
 
  One of the questions we wanted to answer was given previous overtime data, can we predict the amount of overtime paid for the next year and how does this prediction compare with the budget allocation for the BPD?
 
@@ -328,6 +328,34 @@ Since Prophet performed the best on the validation set, we also plotted a 95% co
 
 ![alt text](Plots/ProphetCI.png)
 
+### 1.2 Overtime Job Title Prediction
+
+For the second part of making overtime predictions, we had a look at how overtime differed between different job titles. We combined the employees earnings dataset with the BPD roster we were given, and used the year 2024. The job titles had to be modified to fall into one of these categories, as some officers had more than one job title in the dataset. 
+
+| Job Title                         |
+|----------------------------------|
+| Police Officer                   |
+| Police Sergeant                  |
+| Police Detective                 |
+| Police Lieutenant                |
+| Police Captain                   |
+| Dep Supn (Bpd)                   |
+| Supn Bpd                         |
+| Commissioner (Bpd)              |
+| Supn-In Chief                    |
+| Lieut-Hackney Carriage Inves.   |
+
+And here is the distribution of the overtime pay per job title for the year 2024, as we can see Police Officers earned the most overtime with police Detective being the second highest.
+
+![alt text](plots/overtime_per_job.png)
+
+
+The employees were matched by name from the BPD Roster available to us. We decided to use a Random Forest model to make our predictions for overtime earned for the year 2024. We performed hyperparameter optimization and cross validation to select the best random forest model. The features that were used included the `Job Title, Sex, Ethnic Group and Task Profile Id`, and these were converted to labels using one hot encoding. The best model was selected on the lowest mean absolute error from the models, as we want to minimize the difference the prediction and the true values. The best model was selected with a MAE of $32685 across the data set. The graph below shows the average predicted overtime pay versus the actual overtime pay. From this we can see the model accurately predicts a majority of the classes, with only the `Supn Bpd` and `Subn-in Chief` being large difference more than $10000.
+![alt text](plots/RFovertime.png)
+
+Finally using this model, we had a look at the different gender and ethnic groups, to see if there was any bias in how the overtime is being distributed. We had a look at the average difference from the model's prediction to the actual earned overtime. A positive value in the plot shows that the model predict a higher value than what the group actually earned. From this we can see that on average female employees are earning $2186 less, and male employees $959.22 more than what the model predicts. Similarly for different ethnic groups, black employees are predicted to earn more overtime than what they are actually earning and white,hispanic and asian employees are earning more than what the model predicts. This is a concerning fact as it suggests there might be internal bias within the BPD which discriminates against female employees and black employees. This will need to be investigated to ensure that this is not discrimination against certain groups.
+
+![alt text](plots/overtimeBiasRF.png)
 
 
 ### 2: Modelling Discrimination
