@@ -347,15 +347,15 @@ For the second part of making overtime predictions, we had a look at how overtim
 
 And here is the distribution of the overtime pay per job title for the year 2024, as we can see Police Officers earned the most overtime with police Detective being the second highest.
 
-![alt text](plots/overtime_per_job.png)
+![alt text](Plots/overtime_per_job.png)
 
 
 The employees were matched by name from the BPD Roster available to us. We decided to use a Random Forest model to make our predictions for overtime earned for the year 2024. We performed hyperparameter optimization and cross validation to select the best random forest model. The features that were used included the `Job Title, Sex, Ethnic Group and Task Profile Id`, and these were converted to labels using one hot encoding. The best model was selected on the lowest mean absolute error from the models, as we want to minimize the difference the prediction and the true values. The best model was selected with a MAE of $32685 across the data set. The graph below shows the average predicted overtime pay versus the actual overtime pay. From this we can see the model accurately predicts a majority of the classes, with only the `Supn Bpd` and `Subn-in Chief` being large difference more than $10000.
-![alt text](plots/RFovertime.png)
+![alt text](Plots/RFovertime.png)
 
 Finally using this model, we had a look at the different gender and ethnic groups, to see if there was any bias in how the overtime is being distributed. We had a look at the average difference from the model's prediction to the actual earned overtime. A positive value in the plot shows that the model predict a higher value than what the group actually earned. From this we can see that on average female employees are earning $2186 less, and male employees $959.22 more than what the model predicts. Similarly for different ethnic groups, black employees are predicted to earn more overtime than what they are actually earning and white,hispanic and asian employees are earning more than what the model predicts. This is a concerning fact as it suggests there might be internal bias within the BPD which discriminates against female employees and black employees. This will need to be investigated to ensure that this is not discrimination against certain groups.
 
-![alt text](plots/overtimeBiasRF.png)
+![alt text](Plots/overtimeBiasRF.png)
 
 
 ### 2: Modelling Discrimination
