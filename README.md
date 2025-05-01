@@ -468,6 +468,8 @@ The models were evaluated based on accuracy, AUC-ROC scores, and cross-validatio
 
 Chi-square tests confirm that both gender and ethnic differences in representation among top earners are statistically significant (p < 0.05).
 
+---
+
 ### Feature Engineering
 
 We performed several feature engineering steps to enhance predictive power. Here are some of the key features we created:
