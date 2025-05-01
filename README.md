@@ -5,7 +5,7 @@ This is the project repository for CS 506: Computational Tools for Data Science
 
 ## Link to Presentation
 
-https://youtu.be/2GusWFGZqok
+[https://youtu.be/2GusWFGZqok](https://www.youtube.com/watch?v=YQ6ShcAU_dQ)
 
 ## Dataset Preprocessing :
 
