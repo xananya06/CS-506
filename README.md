@@ -405,7 +405,7 @@ We used a multitude of different models such as:
 Through experimentation, we realized that **Random Forest performed the best**.
 
 ---
-### 4: 
+### 4: Modeling BPD's top earners: with emphasis on the role of demographics
 
 This analysis investigates demographic patterns in Boston Police Department compensation, focusing on how gender and ethnicity influence placement in top earning brackets. Using machine learning models, we identified key factors that predict high earnings and analyzed overtime allocation patterns across demographic groups.
 
@@ -422,6 +422,8 @@ This analysis investigates demographic patterns in Boston Police Department comp
   * Asian officers receive lowest average overtime ($29,891)
   * Ethnic differences in top earner representation are statistically significant
 * **Model Performance**: All three classification models achieved 79.9% accuracy
+  The scatter plot below illustrates the strong relationship between overtime and total earnings, with clear demographic patterns:
+  ![alt text](Plots/correlation.png)
 
 #### Model Results
 
@@ -449,26 +451,11 @@ This analysis investigates demographic patterns in Boston Police Department comp
 | HISPA | $36,358.33 | $28,889.61 | $30,837.74 |
 | WHITE | $33,367.13 | $27,670.78 | $27,394.89 |
 
+![alt text](Plots/gender_and_ethinicity.png)
+
 #### Statistical Significance
 
 Chi-square tests confirm that both gender and ethnic differences in representation among top earners are statistically significant (p < 0.05).
-
-#### Visualizations
-
-##### Figure 1: Relationship Between Overtime and Total Earnings by Demographics
-[INSERT FIGURE 1: Scatter plot showing relationship between overtime and earnings with demographic breakdown]
-
-This visualization shows the strong correlation between overtime and total earnings, with male officers (blue dots) dominating the higher overtime/earnings regions and female officers (orange dots) concentrated in lower ranges.
-
-##### Figure 2: Top 10 Job Titles by Earnings Group
-[INSERT FIGURE 2: Bar chart of job titles by earnings group]
-
-This chart displays the distribution of job titles between top earners and non-top earners, showing which positions are disproportionately represented in the highest compensation brackets.
-
-##### Figure 3: Demographic Distribution Across Salary Bands
-[INSERT FIGURE 3: Stacked bar charts of demographic distribution]
-
-These charts illustrate how gender and ethnic representation changes across salary quintiles, with a clear decline in female representation as salary bands increase.
 
 #### Feature Engineering
 
