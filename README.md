@@ -425,6 +425,29 @@ This analysis investigates demographic patterns in Boston Police Department comp
   The scatter plot below illustrates the strong relationship between overtime and total earnings, with clear demographic patterns:
   ![alt text](Plots/correlation.png)
 
+#### Top Predictive Features
+
+**Decision Tree:**
+1. Job Title_Police Officer (0.45)
+2. Sex_M (0.25)
+3. Job Title_Supn Bpd (0.07)
+4. Job Title_Police Captain (0.01)
+5. Ethnic Grp_BLACK (0.01)
+
+**Random Forest:**
+1. Job Title_Police Officer (0.30)
+2. Sex_M (0.25)
+3. Job Title_Police Detective (0.15)
+4. Job Title_Police Sergeant (0.10)
+5. Job Title_Supn Bpd (0.05)
+
+**AdaBoost:**
+1. Job Title_Police Officer (0.30)
+2. Job Title_Police Detective (0.15)
+3. Ethnic Grp_BLACK (0.15)
+4. Job Title_Police Sergeant (0.15)
+5. Ethnic Grp_HISPA (0.10)
+
 #### Methodology
 
 For this analysis, we defined our target variable as being in the top 20% of earners (those making above $209,134.58 annually). We used three classification models (Decision Tree, Random Forest, and AdaBoost) to predict this binary outcome based on the following features:
