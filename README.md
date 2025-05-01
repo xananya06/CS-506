@@ -421,7 +421,7 @@ This analysis investigates demographic patterns in Boston Police Department comp
   * Hispanic officers receive highest average overtime ($36,358)
   * Asian officers receive lowest average overtime ($29,891)
   * Ethnic differences in top earner representation are statistically significant
-* **Model Performance**: All three classification models achieved 79.9% accuracy
+* **Model Performance**: All three classification models achieved 79.9% accuracy <br/>
   The scatter plot below illustrates the strong relationship between overtime and total earnings, with clear demographic patterns:
   ![alt text](Plots/correlation.png)
 
