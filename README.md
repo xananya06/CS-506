@@ -543,3 +543,46 @@ The below plot highlights the same feature importance extracted using Random For
 
 **It can be inferred for the above 2 plots that Regular and total earnings have the highest say in Employee Attrition.**
 
+
+### 5. Modeling Wage rates across officers
+
+
+#### Feature Engineering
+
+```python
+hispa_grp = df.loc[df['Ethnic Grp'] == 'HISPA'].groupby('Task Profile Descr').agg(mean_hrlyrateh=("Hrly Rate", 'mean'),hispa_count=('ID','count'),tsk=('Task Profile Descr','unique'))
+white_grp = df.loc[df['Ethnic Grp'] == 'WHITE'].groupby('Task Profile Descr').agg(mean_hrlyratew=("Hrly Rate", 'mean'),white_count=('ID','count'),tsk=('Task Profile Descr','unique'))
+black_grp = df.loc[df['Ethnic Grp'] == 'BLACK'].groupby('Task Profile Descr').agg(mean_hrlyrateb=("Hrly Rate", 'mean'),black_count=('ID','count'),tsk=('Task Profile Descr','unique'))
+asian_grp = df.loc[df['Ethnic Grp'] == 'ASIAN'].groupby('Task Profile Descr').agg(mean_hrlyratea=("Hrly Rate", 'mean'),asian_count=('ID','count'),tsk=('Task Profile Descr','unique'))
+```
+
+![image](https://github.com/user-attachments/assets/e2c48ed3-1064-44ad-8784-13b3ea59eaeb)
+
+This indicated the mean hrly rate difference across different ethnic groups is statistically significant. This does not necessarily mean the department is biased as among different ranks, different statistics might be present and we tested our statistics among Police Officers as they are most newly recruited and past biases would not be carried over.
+
+![image](https://github.com/user-attachments/assets/b1da7ada-8e8b-41a3-b233-bff761d6ac37)
+
+As we can see here, the mean hourly wage for the Black group is significantly lower than that for the White group despite being in the same rank as p-value < 0.05 and the null hypothesis is rejected. This disparity should be considered when reweighting department wages.
+
+---
+
+#### Modeling
+
+![image](https://github.com/user-attachments/assets/15cf6d83-d0ad-49ca-9a55-7b1d1e000b37)
+
+The above plot highlights a fact about the outliers - The outliers are either police officers or higher officers at BPD( Supn, Supn-In-Chief, Dept-Supn). The high officers work significantly less hours when compared to the other officers and earn the same wage as other officers. This would mean that as we climb the ladder, there are no significant benefits to an officer and there can be higher rates of attrition if the annual rate doesn't increase proportionally despite increasing economic costs. We used Elliptic Envelope to model here.
+
+
+We used Linear Regression to predict number of hours worked every month using monthly and hourly rate there seems to be no significant disparity in number of hours worked in a month as seen below.
+
+![image](https://github.com/user-attachments/assets/87232dbe-3ea1-449d-a1d0-2bbf9a05074d)
+
+But, when it comed to annual data, police officers worked highest indicating the increased amount of overtime data worked by police officers.
+
+```python
+
+df['Extra Hrs Month'] = (df['Annual Rt']-df['Comp Rate'])/df['Monthly Rt']
+
+```
+
+![image](https://github.com/user-attachments/assets/99fc955b-fbc5-4390-bb86-8c88963c7a76)
