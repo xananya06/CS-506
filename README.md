@@ -404,6 +404,58 @@ We used a multitude of different models such as:
 
 Through experimentation, we realized that **Random Forest performed the best**.
 
+
+### Feature Engineering
+
+We performed several feature engineering steps to enhance predictive power. Here are some of the key features we created:
+
+```python
+df['First_Year'] = df.groupby('Name')['Year'].transform('min')
+df['totalYears'] = df['Year'] - df['First_Year']
+
+df["prevOvertime"] = df.groupby('Name')['Overtime'].shift(1)
+df["overtimeChange"] = df['Overtime'] - df['prevOvertime']
+df["overtimeChange"] = df['overtimeChange'].fillna(0)
+
+df['overtimeRolling'] = df.groupby('Name')['Overtime'].rolling(window=3, min_periods=1).mean().reset_index(level=0, drop=True)
+df['avgOvertime'] = df['overtimeRolling'].fillna(df['Overtime'])
+```
+
+---
+
+#### Top 10 Employees at Risk of Attrition (2025)
+
+| ID       | Name                        | Department Name           | Title          |
+|----------|-----------------------------|----------------------------|----------------|
+| 318272   | Andrews, Jaelyn Chanel      | Boston Police Department   | Police Officer |
+| 318269   | Grady, Kyle R               | Boston Police Department   | Police Officer |
+| 318373   | Jaradeh, Daniel P           | Boston Police Department   | Police Officer |
+| 318371   | Mackin, Christopher Kern    | Boston Police Department   | Police Officer |
+| 318401   | Stanley, Angelique Rosetta  | Boston Police Department   | Police Officer |
+| 318409   | Skinas, Nicholas David      | Boston Police Department   | Police Officer |
+| 318408   | Mejia, Alejandra            | Boston Police Department   | Police Officer |
+| 318370   | Campione, Samantha          | Boston Police Department   | Police Officer |
+| 318407   | Rogers, Michelle M.         | Boston Police Department   | Police Officer |
+| 318334   | Orne, Christina G           | Boston Police Department   | Police Officer |
+
+From the above table, we can infer that the **top 10 attrition-risk employees are all holding the title of "Police Officer"**.
+
+---
+
+## 📊 Key Features Contributing to Attrition
+
+The below plot highlights the **most important features** that help identify attrition.
+
+![alt text](Plots/shapImportance.png)
+
+The below plot highlights the same feature importance extracted using Random Forest 
+
+![alt text](Plots/rfImportance.png)
+
+
+**It can be inferred for the above 2 plots that Regular and total earnings have the highest say in Employee Attrition.**
+
+
 ---
 ### 4: Modeling BPD's top earners: with emphasis on the role of demographics
 
@@ -492,57 +544,6 @@ The models were evaluated based on accuracy, AUC-ROC scores, and cross-validatio
 Chi-square tests confirm that both gender and ethnic differences in representation among top earners are statistically significant (p < 0.05).
 
 ---
-
-### Feature Engineering
-
-We performed several feature engineering steps to enhance predictive power. Here are some of the key features we created:
-
-```python
-df['First_Year'] = df.groupby('Name')['Year'].transform('min')
-df['totalYears'] = df['Year'] - df['First_Year']
-
-df["prevOvertime"] = df.groupby('Name')['Overtime'].shift(1)
-df["overtimeChange"] = df['Overtime'] - df['prevOvertime']
-df["overtimeChange"] = df['overtimeChange'].fillna(0)
-
-df['overtimeRolling'] = df.groupby('Name')['Overtime'].rolling(window=3, min_periods=1).mean().reset_index(level=0, drop=True)
-df['avgOvertime'] = df['overtimeRolling'].fillna(df['Overtime'])
-```
-
----
-
-#### Top 10 Employees at Risk of Attrition (2025)
-
-| ID       | Name                        | Department Name           | Title          |
-|----------|-----------------------------|----------------------------|----------------|
-| 318272   | Andrews, Jaelyn Chanel      | Boston Police Department   | Police Officer |
-| 318269   | Grady, Kyle R               | Boston Police Department   | Police Officer |
-| 318373   | Jaradeh, Daniel P           | Boston Police Department   | Police Officer |
-| 318371   | Mackin, Christopher Kern    | Boston Police Department   | Police Officer |
-| 318401   | Stanley, Angelique Rosetta  | Boston Police Department   | Police Officer |
-| 318409   | Skinas, Nicholas David      | Boston Police Department   | Police Officer |
-| 318408   | Mejia, Alejandra            | Boston Police Department   | Police Officer |
-| 318370   | Campione, Samantha          | Boston Police Department   | Police Officer |
-| 318407   | Rogers, Michelle M.         | Boston Police Department   | Police Officer |
-| 318334   | Orne, Christina G           | Boston Police Department   | Police Officer |
-
-From the above table, we can infer that the **top 10 attrition-risk employees are all holding the title of "Police Officer"**.
-
----
-
-## 📊 Key Features Contributing to Attrition
-
-The below plot highlights the **most important features** that help identify attrition.
-
-![alt text](Plots/shapImportance.png)
-
-The below plot highlights the same feature importance extracted using Random Forest 
-
-![alt text](Plots/rfImportance.png)
-
-
-**It can be inferred for the above 2 plots that Regular and total earnings have the highest say in Employee Attrition.**
-
 
 ### 5. Modeling Wage rates across officers
 
