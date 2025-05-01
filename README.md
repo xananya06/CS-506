@@ -405,6 +405,70 @@ We used a multitude of different models such as:
 Through experimentation, we realized that **Random Forest performed the best**.
 
 ---
+### 4: 
+
+This analysis investigates demographic patterns in Boston Police Department compensation, focusing on how gender and ethnicity influence placement in top earning brackets. Using machine learning models, we identified key factors that predict high earnings and analyzed overtime allocation patterns across demographic groups.
+
+#### Key Findings
+
+* **Earnings Threshold**: Top 20% of earners make above $209,134.58 annually
+* **Overtime-Earnings Correlation**: Strong positive correlation (0.727) between overtime pay and total earnings
+* **Gender Disparities**:
+  * Significant underrepresentation of women in top earning brackets
+  * Women receive substantially less overtime on average
+  * Gender is a strong predictor of top earner status across all models
+* **Ethnic Group Variations**:
+  * Hispanic officers receive highest average overtime ($36,358)
+  * Asian officers receive lowest average overtime ($29,891)
+  * Ethnic differences in top earner representation are statistically significant
+* **Model Performance**: All three classification models achieved 79.9% accuracy
+
+#### Model Results
+
+| Metric | Decision Tree | Random Forest | AdaBoost |
+|--------|---------------|--------------|----------|
+| Test Accuracy | 0.799 | 0.799 | 0.799 |
+| AUC-ROC | 0.667 | 0.682 | 0.685 |
+| CV Accuracy | 0.800 ± 0.001 | 0.789 ± 0.020 | 0.797 ± 0.004 |
+
+![alt text](Plots/roc_comaprison.png)
+
+#### Overtime Distribution by Gender
+
+| Gender | Mean Overtime | Median Overtime | Std Deviation |
+|--------|---------------|-----------------|---------------|
+| Female | $24,971.24 | $19,866.63 | $21,986.99 |
+| Male | $35,325.92 | $29,784.57 | $28,829.23 |
+
+#### Overtime Distribution by Ethnicity
+
+| Ethnic Group | Mean Overtime | Median Overtime | Std Deviation |
+|--------------|---------------|-----------------|---------------|
+| ASIAN | $29,891.52 | $24,309.69 | $24,282.39 |
+| BLACK | $34,787.58 | $27,624.26 | $29,605.13 |
+| HISPA | $36,358.33 | $28,889.61 | $30,837.74 |
+| WHITE | $33,367.13 | $27,670.78 | $27,394.89 |
+
+#### Statistical Significance
+
+Chi-square tests confirm that both gender and ethnic differences in representation among top earners are statistically significant (p < 0.05).
+
+#### Visualizations
+
+##### Figure 1: Relationship Between Overtime and Total Earnings by Demographics
+[INSERT FIGURE 1: Scatter plot showing relationship between overtime and earnings with demographic breakdown]
+
+This visualization shows the strong correlation between overtime and total earnings, with male officers (blue dots) dominating the higher overtime/earnings regions and female officers (orange dots) concentrated in lower ranges.
+
+##### Figure 2: Top 10 Job Titles by Earnings Group
+[INSERT FIGURE 2: Bar chart of job titles by earnings group]
+
+This chart displays the distribution of job titles between top earners and non-top earners, showing which positions are disproportionately represented in the highest compensation brackets.
+
+##### Figure 3: Demographic Distribution Across Salary Bands
+[INSERT FIGURE 3: Stacked bar charts of demographic distribution]
+
+These charts illustrate how gender and ethnic representation changes across salary quintiles, with a clear decline in female representation as salary bands increase.
 
 #### Feature Engineering
 
