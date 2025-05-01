@@ -457,7 +457,7 @@ This analysis investigates demographic patterns in Boston Police Department comp
 
 Chi-square tests confirm that both gender and ethnic differences in representation among top earners are statistically significant (p < 0.05).
 
-#### Feature Engineering
+### Feature Engineering
 
 We performed several feature engineering steps to enhance predictive power. Here are some of the key features we created:
 
