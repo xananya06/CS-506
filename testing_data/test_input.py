@@ -1,8 +1,8 @@
 import pandas as pd
+from pathlib import Path
 
 def test_input_shape():
-    # Example: Load a CSV used in your repo
-    df = pd.read_csv("../data/combined_all_employees_salaries_cleaned.csv")  # change path if needed
+    path = Path(__file__).resolve().parent.parent / "data/combined_all_employees_salaries_cleaned.csv"
     assert df.shape[1] > 0, "Data has no columns"
     assert df.shape[0] > 0, "Data has no rows"
     # (318411, 13) Only check 13 columns
