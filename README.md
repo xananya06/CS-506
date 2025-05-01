@@ -425,6 +425,17 @@ This analysis investigates demographic patterns in Boston Police Department comp
   The scatter plot below illustrates the strong relationship between overtime and total earnings, with clear demographic patterns:
   ![alt text](Plots/correlation.png)
 
+#### Methodology
+
+For this analysis, we defined our target variable as being in the top 20% of earners (those making above $209,134.58 annually). We used three classification models (Decision Tree, Random Forest, and AdaBoost) to predict this binary outcome based on the following features:
+
+* **Demographic Factors**: Gender (Sex) and Ethnic Group
+* **Job Information**: Job Title
+
+All categorical variables were one-hot encoded for model compatibility. We used an 80/20 train/test split with stratification to maintain class proportions. For the Decision Tree model, we limited depth to 3 to prevent overfitting. For Random Forest, we used 100 estimators with maximum depth of 5. For AdaBoost, we used 100 estimators with the default learning rate.
+
+The models were evaluated based on accuracy, AUC-ROC scores, and cross-validation performance to ensure robust findings. The strong agreement between different modeling approaches strengthens confidence in our conclusions about demographic factors influencing earnings.
+
 #### Model Results
 
 | Metric | Decision Tree | Random Forest | AdaBoost |
