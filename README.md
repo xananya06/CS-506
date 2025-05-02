@@ -7,6 +7,24 @@ This is the project repository for CS 506: Computational Tools for Data Science
 
 https://www.youtube.com/watch?v=oK3LE3O4Y8w
 
+## Makefile
+
+### Prerequisites:
+
+Python 3.7+
+
+### Makefile
+
+Run this command to install all the dependencies related to the project as listed in the requirements.txt.
+
+<pre> make  </pre>
+
+This command will delete the virtual environment created.
+
+<pre> make clean</pre>
+
+Any scripts can be run by calling the relevant script_name.py file. And any Jupyter Notebooks can be run with the virtual environment created.
+
 ## Dataset Preprocessing :
 
 The cleaning process of the data started with the visualization of the data frame. The following points below highlights the steps taken.
